@@ -10,7 +10,8 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: #fff;
-    color: #0a0a0a;
+    color: #001632;
+    user-select: none;
 }
 
 /* Main */
@@ -81,10 +82,52 @@ body {
     cursor: pointer;
 }
 
+/* Footer */
+.footer{
+    width: 100%;
+    height: 70px;
+    padding: 0 60px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f1f5fa;
+}
+
+.footer span{
+    color: #001632;
+}
+
+.footer i{
+    color: #001632;
+    font-size: .9rem;
+}
+
+.footer a{
+    position: relative;
+    color: #3535ec;
+}
+
+.footer a::before{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #3535ec;
+    transition: width 200ms ease-in-out;
+}
+
+.footer a:hover::before{
+    width: 100%;
+}
+
 /* Media Query */
 
 @media only screen and (max-width: 900px){
-    .header{
+    .header,
+    .footer{
         padding: 0 4%;
     }
 }
