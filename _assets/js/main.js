@@ -19,3 +19,10 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 - con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
 
 */
+const btnPlay = document.querySelector(".btn_play"); // Seleziono il bottone Play nel DOM
+
+btnPlay.addEventListener("click", function() { // Al click del bottone Play
+    for (let i = 1; i <= 100; i++) { // Parte il ciclio che genera un numero da 1 a 100
+        
+    }
+})
