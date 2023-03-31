@@ -57,6 +57,30 @@ body {
     padding: 11px 22px;
 }
 
+/* Game */
+.main_game{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.grid_List{
+    padding: 4% 0;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.box{
+    border: 1px solid #3535ec;
+    color: #000;
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
 /* Media Query */
 
 @media only screen and (max-width: 900px){
