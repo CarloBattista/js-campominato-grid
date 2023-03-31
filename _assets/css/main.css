@@ -9,6 +9,58 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #0a0a0a;
-    color: #fafafa;
+    background: #fff;
+    color: #0a0a0a;
+}
+
+/* Main */
+.container_main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.header{
+    width: 100%;
+    height: 70px;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f1f5fa;
+}
+
+.logoSite{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    height: 30px;
+}
+
+.headingSite{
+    color: #001632;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: .5em;
+}
+
+.btn{
+    background-color: #3535ec;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 11px 22px;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 900px){
+    .header{
+        padding: 0 4%;
+    }
 }
