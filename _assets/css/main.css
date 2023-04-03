@@ -1,3 +1,7 @@
+:root{
+    --gridBox: repeat(10, 1fr);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -125,7 +129,7 @@ body {
 .grid_List {
     padding: 4% 0;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: var(--gridBox);
 }
 
 .box {

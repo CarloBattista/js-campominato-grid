@@ -22,11 +22,15 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 
 const btnPlay = document.querySelector(".btn_play"); // Seleziono il bottone Play nel DOM
 const message = document.querySelector(".container_message"); // Seleziono il messaggio nel DOM
+const r = document.querySelector(":root"); // Seleziono ROOT
 
 let isGridGenerated = false; // Variabile booleana per tenere traccia se la griglia è stata già generata
 
 btnPlay.addEventListener("click", function () {
+    game();
+});
 
+function game() {
     message.remove() // Il messaggio viene rimosso dal DOM al click del bottone
 
     btnPlay.innerHTML = "Stai giocando!!"; // Al click del bottone viene cambiato il testo all'interno
@@ -39,7 +43,7 @@ btnPlay.addEventListener("click", function () {
         const selectLevels = document.querySelector(".levels_Game") // Seleziono nel dom l'input select
         let valueSelectValue = selectLevels.options[selectLevels.selectedIndex].value; // Prende gli elementi value dentro la option
         let valueSelectText = selectLevels.options[selectLevels.selectedIndex].text; // Prende gli elementi text dentro la option
-        console.log("Hai impostato il livello su: " + valueSelectValue)
+        console.log("Hai impostato il livello su: " + valueSelectText)
 
         function createDiv(html, classs, text) { // Associo delle richieste alla funzione
             let element = document.createElement(html);
@@ -60,8 +64,16 @@ btnPlay.addEventListener("click", function () {
                 this.classList.toggle("clickedBlue"); // Grazie al this rendo univoco ogni click del BOX
             })
 
+            myFunction_set(valueSelectValue)
+
             gridList.append(divBox) // Stampo in pagina i BOX
         };
     }
+}
 
-});
+// Cambio numero box in griglia in base al livello scelto
+function myFunction_set(x) {
+    x = Math.sqrt(x)
+    
+    r.style.setProperty('--gridBox', `repeat(${x}, 1fr)`);
+}
