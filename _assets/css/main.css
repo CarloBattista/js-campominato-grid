@@ -15,13 +15,13 @@ body {
 }
 
 /* Main */
-.container_main{
+.container_main {
     position: relative;
     width: 100%;
     height: auto;
 }
 
-.header{
+.header {
     width: 100%;
     height: 70px;
     padding: 0 60px;
@@ -31,23 +31,28 @@ body {
     background: #f1f5fa;
 }
 
-.logoSite{
+.logoSite {
     display: flex;
     align-items: center;
 }
 
-.logo{
+.logo {
     height: 30px;
 }
 
-.headingSite{
+.headingSite {
     color: #001632;
     font-size: 1rem;
     font-weight: 700;
     margin-left: .5em;
 }
 
-.btn{
+.container_buttons {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
     background-color: #3535ec;
     border: none;
     border-radius: 2px;
@@ -56,9 +61,10 @@ body {
     font-size: 16px;
     font-weight: 600;
     padding: 11px 22px;
+    height: 40px;
 }
 
-.btn.btnAnimation{
+.btn.btnAnimation {
     animation-name: pulse;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
@@ -68,21 +74,41 @@ body {
 @keyframes pulse {
     0% {
         background-color: #3535ec;
-    } 50% {
+    }
+
+    50% {
         background-color: #F61566;
-    } 100% {
+    }
+
+    100% {
         background-color: #3535ec;
     }
 }
 
+/* Select BTN Levels */
+.levels_Game {
+    position: relative;
+    background-color: #3535ec;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 11px 22px;
+    height: 40px;
+    margin-right: 1em;
+}
+
 /* Game */
-.main_game{
+.main_game {
     width: 80%;
     height: 100%;
     margin: 0 auto;
 }
 
-.container_message{
+.container_message {
     height: 100vh;
     padding: 4% 0;
     text-align: center;
@@ -90,19 +116,19 @@ body {
     justify-content: center;
 }
 
-.message{
+.message {
     color: #001632;
     font-size: 1.3rem;
     font-weight: 700;
 }
 
-.grid_List{
+.grid_List {
     padding: 4% 0;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
 }
 
-.box{
+.box {
     border: 1px solid #3535ec;
     color: #001632;
     width: 100%;
@@ -115,14 +141,14 @@ body {
     cursor: pointer;
 }
 
-.box.clickedBlue{
+.box.clickedBlue {
     background-color: #84a5fa;
     color: #fff;
     font-weight: 700;
 }
 
 /* Footer */
-.footer{
+.footer {
     width: 100%;
     height: 70px;
     padding: 0 60px;
@@ -133,21 +159,21 @@ body {
     background: #f1f5fa;
 }
 
-.footer span{
+.footer span {
     color: #001632;
 }
 
-.footer i{
+.footer i {
     color: #001632;
     font-size: .9rem;
 }
 
-.footer a{
+.footer a {
     position: relative;
     color: #3535ec;
 }
 
-.footer a::before{
+.footer a::before {
     position: absolute;
     content: "";
     bottom: 0;
@@ -158,18 +184,20 @@ body {
     transition: width 200ms ease-in-out;
 }
 
-.footer a:hover::before{
+.footer a:hover::before {
     width: 100%;
 }
 
 /* Media Query */
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 900px) {
+
     .header,
-    .footer{
+    .footer {
         padding: 0 4%;
     }
-    .box{
+
+    .box {
         font-size: 1.3rem;
     }
 }
